@@ -64,19 +64,18 @@
             <Button 
                 Foreground="Black"
                 Grid.Column="1" BorderThickness="0.1" 
-                Background="Transparent"  Style="{StaticResource ButtonRevealStyle}"
+                Background="Transparent"
                      Content="LuckyClick" VerticalAlignment="Top"
                 HorizontalAlignment="Center" Click="LuckySong" ></Button>
            
             <Button Grid.Column="0" BorderThickness="0.1" 
-                    Background="Transparent"  Style="{StaticResource ButtonRevealStyle}"
+                    Background="Transparent"
                     Content="MusicList" VerticalAlignment="Top"
                     HorizontalAlignment="Right" Click="GoList" ></Button>
             
             <Button Grid.Column="2" 
                     BorderThickness="0.1" 
                     Background="Transparent"  
-                    Style="{StaticResource ButtonRevealStyle}"
                     Content="AddSong" 
                     VerticalAlignment="Top"
                     HorizontalAlignment="Left"

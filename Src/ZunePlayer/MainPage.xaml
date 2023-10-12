@@ -47,7 +47,7 @@
         </VisualStateManager.VisualStateGroups>
 
         <RelativePanel 
-            Margin="0,-27,0,20" 
+            Margin="0,-1,0,20" 
             VerticalAlignment="Center">
             
             <TextBlock 
@@ -55,7 +55,9 @@
                 x:Name="headerText" 
                 Text="{StaticResource AppName}"
                 Foreground="{StaticResource linearGradientBrush}"
-                Style="{ThemeResource HeaderTextBlockStyle}" FontSize="72" SelectionHighlightColor="#FF4C4A48" />
+                Style="{ThemeResource HeaderTextBlockStyle}" 
+                FontSize="32" 
+                SelectionHighlightColor="#FF4C4A48" />
 
                 <!--
                   Name="SearchBox"
@@ -64,11 +66,11 @@
                 -->
                 <AutoSuggestBox 
                 x:Name="SearchBox"
-                Height="32" 
+                Height="12" 
                 PlaceholderText="Search music library"
                 RelativePanel.LeftOf="aboutButton"
                 RelativePanel.AlignVerticalCenterWith="headerText"
-                Width="200" 
+                Width="60" 
                 RenderTransformOrigin="0.525,-0.359" 
                 QueryIcon="Find" 
                 RequestedTheme="Dark"
@@ -80,11 +82,10 @@
                 x:Name="aboutButton"
                 Background="Transparent"  
                 Foreground="{StaticResource AccentColor}"
-                Style="{StaticResource ButtonRevealStyle}"
                 Content="About" 
                 RelativePanel.AlignRightWithPanel="True"
                 RelativePanel.AlignVerticalCenterWith="headerText"
-                Width="100" 
+                Width="60" 
                 Click="GoCreate" />
         </RelativePanel>
 
@@ -95,7 +96,7 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <RelativePanel Margin="0,25,0,0">
+            <RelativePanel Margin="0,5,0,0">
                 <Button 
                     Name="musicButton" 
                     Content="music" 
@@ -126,7 +127,7 @@
                     Symbol="Shuffle"
                     RelativePanel.AlignBottomWithPanel="True"
                     Foreground="White"
-                    Margin="10,0,0,10"
+                    Margin="1,0,0,1"
                     ToolTipService.ToolTip="Shuffle my music library"
                     Tapped="ShuffleIcon_Tapped"/>
             </RelativePanel>
@@ -159,15 +160,15 @@
         <AppBar IsOpen="True" IsSticky="True">
             <Grid Width="auto" x:Name="bottombar">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="50" />
-                    <ColumnDefinition Width="50" />
-                    <ColumnDefinition Width="50" />
-                    <ColumnDefinition Width="35" />
+                    <ColumnDefinition Width="20" />
+                    <ColumnDefinition Width="20" />
+                    <ColumnDefinition Width="20" />
+                    <ColumnDefinition Width="15" />
                     <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="35" />
+                    <ColumnDefinition Width="15" />
+                    <ColumnDefinition Width="20" />
                     <ColumnDefinition Width="50" />
-                    <ColumnDefinition Width="100" />
-                    <ColumnDefinition Width="60" />
+                    <ColumnDefinition Width="20" />
                 </Grid.ColumnDefinitions>
 
                 <AppBarButton 
@@ -205,7 +206,7 @@
                 <Slider 
                     x:Name="VolumeLine" Minimum="0" Maximum="100" 
                     Grid.Column="7" 
-                    Width="100" 
+                    Width="50" 
                     VerticalAlignment="Center" 
                     ValueChanged="ChangeMediaVolume" />
 

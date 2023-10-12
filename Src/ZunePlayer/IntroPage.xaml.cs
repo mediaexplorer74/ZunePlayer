@@ -14,8 +14,6 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-// https://go.microsoft.com/fwlink/?LinkId=234238 上介绍了“空白页”项模板
-
 namespace ZunePlayer
 {
     
@@ -31,25 +29,30 @@ namespace ZunePlayer
 
         private void LuckySong(object sender, RoutedEventArgs e)
         {
-            Random rd = new Random();
-            SongId = rd.Next() % songList.AllItems.Count;
-            Uri SongUri = new Uri(songList.GetSongByID(SongId).Path);
-            mediaPlayer.Source = SongUri;
-            mediaPlayer.Play();
-            PoleStoryboard.Begin();
-            BigStoryboard.Begin();
-
+            if (songList.AllItems.Count > 0)
+            {
+                Random rd = new Random();
+                SongId = rd.Next() % songList.AllItems.Count;
+                Uri SongUri = new Uri(songList.GetSongByID(SongId).Path);
+                mediaPlayer.Source = SongUri;
+                mediaPlayer.Play();
+                PoleStoryboard.Begin();
+                BigStoryboard.Begin();
+            }
         }
 
         private void NextSongPlay(object sender, RoutedEventArgs e)
         {
-            Random rd = new Random();
-            SongId = rd.Next() % songList.AllItems.Count;
-            Uri SongUri = new Uri(songList.GetSongByID(SongId).Path);
-            mediaPlayer.Source = SongUri;
-            mediaPlayer.Play();
-            PoleStoryboard.Begin();
-            BigStoryboard.Begin();
+            if (songList.AllItems.Count > 0)
+            {
+                Random rd = new Random();
+                SongId = rd.Next() % songList.AllItems.Count;
+                Uri SongUri = new Uri(songList.GetSongByID(SongId).Path);
+                mediaPlayer.Source = SongUri;
+                mediaPlayer.Play();
+                PoleStoryboard.Begin();
+                BigStoryboard.Begin();
+            }
         }
 
         private void GoList(object sender, RoutedEventArgs e)

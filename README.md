@@ -6,7 +6,8 @@ My little RnD of bjason's Zune-like music player...
 Glad you find this repo. If you've heard about Zune, you would be glad that this repo is all about ;)
 
 ## Screenshot(s)
-![Desktop mode](Images/shot01.png)
+![](Images/shot01.png)
+![](Images/shot02.png)
 
 ## My 2 cents
 - "Zune theme" mini-research (design, animations, et.c)

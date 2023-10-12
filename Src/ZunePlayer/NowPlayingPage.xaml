@@ -9,27 +9,28 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <Grid x:Name="InlineMusicViewGrid" Grid.Column="1" Margin="66,-50,-18,-166"  >
+        <Grid x:Name="InlineMusicViewGrid" Grid.Column="1" Margin="36,-20,-8,-66"  >
             <ScrollViewer Margin="10">
                 <StackPanel>
                     <Image x:Name="AlbumCover" Source="Assets/MusicalNotes.png" 
                            Width="200" Height="200"
                            Stretch="None"/>
                     
-                    <RelativePanel Width="350">
+                    <RelativePanel Width="150">
                         <Button BorderThickness="0.1" 
                                 Background="Transparent"  
-                                Style="{StaticResource ButtonRevealStyle}"
                                 x:Name="Share"  
                                 RelativePanel.AlignRightWithPanel="True" 
-                                Margin="-40.4,0,0,0" 
+                                Margin="0,0,0,0" 
                                 Height="40" Width="40" 
                                 HorizontalAlignment="Left" 
                                 VerticalAlignment="Center" 
                                 Click="ShareSong">
                             
                             <StackPanel>
-                                <Image Source="Assets/share.png" Height="20" Width="20"/>
+                                <Image Source="Assets/share.png" 
+                                       Height="20" 
+                                       Width="20"/>
                             </StackPanel>
                         </Button>
 
@@ -37,43 +38,41 @@
                     
                     <TextBox BorderThickness="0" 
                              x:Name="Title1"
-                             Width="350" Header="Name" 
-                             Margin="0,12,0,0" />
+                             Width="150" Header="Name" 
+                             Margin="0,2,0,0" />
                     
                     <TextBox BorderThickness="0" 
                              x:Name ="Artist1" 
-                             Width="350"  Margin="0,12,0,0" Header="Singer" />
+                             Width="150"  
+                             Margin="0,2,0,0" 
+                             Header="Singer" />
                     
                     <TextBox BorderThickness="0" 
                              x:Name ="Path1"
-                             Width="350"  Margin="0,12,0,0" Header="Path" 
+                             Width="150"  
+                             Margin="0,2,0,0"
+                             Header="Path" 
                              HorizontalAlignment="Center" />
                     
-                    <RelativePanel Width="350" Margin="0,24,0,0">
+                    <RelativePanel Width="150" Margin="0,14,0,0">
                         <Button 
                                 x:Name="UpdateButton"
-                                BorderThickness="0.1" Background="Transparent"  
-                                Style="{StaticResource ButtonRevealStyle}"                                
+                                BorderThickness="0.1" 
+                                Background="Transparent"  
                                 Content="Update" 
                                 HorizontalAlignment="Left"
-                                Width="80" 
+                                Width="60" 
                                 Click="UpdateSong" />
 
                         <Button x:Name="DeleteButton"
-                                BorderThickness="0.1" Background="Transparent" 
-                                Style="{StaticResource ButtonRevealStyle}"
-                                Content="Delete" Width="80" 
+                                BorderThickness="0.1" 
+                                Background="Transparent" 
+                                Content="Delete" Width="60" 
                                 RelativePanel.AlignRightWithPanel="True"
                                 Click="DeleteSong" />
-
                     </RelativePanel>
-
                 </StackPanel>
             </ScrollViewer>
-
-        </Grid>
-
-
-        
+        </Grid>        
     </Grid>
 </Page>
